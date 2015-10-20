@@ -18,7 +18,6 @@ def line(array)
   if array.empty?
     puts "The line is currently empty."
   else
-    newArray = Array.new
     string = "The line is currently:"
     array.each_with_index do |name,index|
       string << " #{index+1}. #{name}"
