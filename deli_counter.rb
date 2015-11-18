@@ -6,11 +6,7 @@ def line(line_array)
   if line_array.empty?
     puts "The line is currently empty."
   else
-    line_string, count = "", 0
-    line_array.each do |name|
-      count += 1
-      line_string += " #{count}. #{name}"
-    end
+    line_string = (0...line_array.length).collect { |ind| " #{ind+1}. #{line_array[ind]}" }.join("")
     puts "The line is currently:#{line_string}"
   end
 end
