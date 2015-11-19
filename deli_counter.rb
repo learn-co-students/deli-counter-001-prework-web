@@ -18,10 +18,12 @@ def line(katz_deli)
     puts "The line is currently empty."
   
   else 
-    print "The line is currently: "
-    katz_deli.each_with_index do |name, i|
-      print "#{i + 1}. #{name} "
-    end
+     a = "The line is currently: " 
+     b = ""
+      katz_deli.each_with_index do |name, i|
+      b += "#{i + 1}. #{name}"
+      end
+     puts a + b
   end
 end
 
