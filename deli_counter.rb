@@ -1,6 +1,7 @@
 def take_a_number(katz_deli, name)
   katz_deli.push(name)
   number = katz_deli.count
+  puts "Welcome, #{name}. You are number #{number} in line."
 end
 
 
@@ -18,10 +19,10 @@ def line(katz_deli)
     puts "The line is currently empty."
   
   else 
-     a = "The line is currently: " 
+     a = "The line is currently:" 
      b = ""
       katz_deli.each_with_index do |name, i|
-      b += "#{i + 1}. #{name}"
+      b += " #{i + 1}. #{name}"
       end
      puts a + b
   end
