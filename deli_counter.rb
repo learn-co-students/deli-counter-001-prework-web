@@ -1,30 +1,27 @@
-# Write your code here.
+katz_deli = []
 
-def line(line)
-  if line.empty? == true
+def line(katz_deli)
+  name_cart = ""
+  if katz_deli == []
     puts "The line is currently empty."
   else
-    print_line(line)
+    katz_deli.each_with_index do |name, idx|
+      name_cart =  name_cart + " #{idx +1}. #{name}"
+    end
+    puts "The line is currently:#{name_cart}"
   end
 end
 
-def print_line(line)
-  line_text = "The line is currently:"
-  line.each_with_index do |name, index|
-    line_text << " #{index+1}. #{name}"
+def take_a_number(katz_deli, person)
+  katz_deli << person
+  puts "Welcome, #{person}. You are number #{katz_deli.count} in line."
+end
+
+def now_serving(katz_deli)
+  if katz_deli.count == 0
+    puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{katz_deli[0]}."
+    katz_deli.shift
   end
-  puts line_text
 end
-
-def take_a_number(line, name)
-  line.push(name)
-  puts "Welcome, #{name}. You are number #{line.size} in line."
-end
-
-def now_serving(line)
-  line.empty? ? puts("There is nobody waiting to be served!") : puts("Currently serving #{line.shift}.")
-end
-
-
-
-
