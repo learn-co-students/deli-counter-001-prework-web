@@ -8,7 +8,7 @@ else
  katz_deli.each_with_index do |name, index|
  msg += " #{index + 1}. #{name}"
  end
- puts out
+ puts msg
  end 
 end
 
