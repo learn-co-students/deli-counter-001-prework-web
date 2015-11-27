@@ -33,15 +33,8 @@ def line(deli)
 
 end
 
-
-
-
 def get_a_number(line)
-  curr_position = (line[-1] || 0) + 1
-  line << curr_position
+  curr_position = line.size + 1
   curr_position
 end
 
-def serve_customer(line)
-  line.shift
-end
