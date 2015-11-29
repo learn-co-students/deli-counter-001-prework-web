@@ -18,11 +18,7 @@ katz_deli.each_with_index do |name, index|
 
 
 end
-puts str
-#puts "The line is currently:"
-   #katz_deli.each_with_index do|name,index|
-    # print"The line is currently: #{index+1}. #{name}"
-# end
+    puts str
 
      elsif katz_deli.empty? == true
   puts "The line is currently empty."
@@ -43,6 +39,3 @@ def now_serving (katz_deli)
 end
 
 
-#name = "Morgana"
-#line(["Logan", "Avi", "Spencer"])
-#take_a_number(katz_deli,name)
