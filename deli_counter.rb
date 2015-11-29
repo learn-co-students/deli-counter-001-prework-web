@@ -9,14 +9,14 @@ def take_a_number(katz_deli, name)
   return name, position
 end
 
-  def line(katz_deli)
+
+
+def line(katz_deli)
  if katz_deli.empty? == false
 
   str = "The line is currently:"
 katz_deli.each_with_index do |name, index|
    str += " #{index + 1}. #{name}"
-
-
 end
     puts str
 
@@ -24,6 +24,7 @@ end
   puts "The line is currently empty."
  end
 end
+
 
 
 
