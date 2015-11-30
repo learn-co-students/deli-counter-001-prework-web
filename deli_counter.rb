@@ -7,8 +7,8 @@ def line(line_array)
     puts "The line is currently empty."
   else
     line_string = ""
-    (0...line_array.length).each do |ind|
-      line_string += " #{ind+1}. #{line_array[ind]}"
+    line_array.each_with_index do |name, ind|
+      line_string += " #{ind+1}. #{name}"
     end
     puts "The line is currently:#{line_string}"
   end
