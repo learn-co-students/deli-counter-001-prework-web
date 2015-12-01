@@ -1,7 +1,7 @@
 
 def get_a_number(line)
-    line << 1
+    line << line.last + 1
 
-    return line.length
+    return line.last
 
 end
