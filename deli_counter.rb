@@ -2,11 +2,13 @@ def line(katz_deli)
   if katz_deli.empty?
       puts "The line is currently empty."
   else
-      puts "The line is currently: 1. Logan 2. Avi 3. Spencer"
-      #katz_deli.each_with_index{|x,i| puts " #{i+1}. #{x}"} 
+      a = "The line is currently:"
+      katz_deli.each_with_index do |element, i|
+         a << " #{i+=1}. #{element}"
+      end 
+      puts a 
   end
 end
-
 
 def take_a_number(katz_deli, name)
   if katz_deli.empty?
@@ -18,7 +20,6 @@ def take_a_number(katz_deli, name)
   end
 end
 
-
 def now_serving(katz_deli)
   if katz_deli.empty?
       puts "There is nobody waiting to be served!"
@@ -28,6 +29,22 @@ def now_serving(katz_deli)
 end
 
 # take_a_number(["dan","james","colin"],"Kim")
-# line(["dan","james","Kim"])
+# line(["dan","james","kim"])
 # line([])
 
+
+
+# sentence = "This is my sentence:"
+#     arr.each.with_index(1) do |element, i|
+#       sentence << " #{i}. #{element}"
+#     end
+
+
+# def line(katz_deli)
+#   if katz_deli.empty?
+#       puts "The line is currently empty."
+#   else
+#       print "The line is currently:"
+#       katz_deli.each_with_index{|x,i| print " #{i+1}. #{x}"} 
+#   end
+# end
