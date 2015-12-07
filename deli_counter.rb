@@ -16,6 +16,7 @@ def line(katz_deli)
 end
 
 def take_a_number(katz_deli, name)
+    puts "Welcome, #{name}. You are number #{katz_deli.length+1} in line."
     return katz_deli.push(name)
 end
 
@@ -28,7 +29,7 @@ def now_serving(katz_deli)
     end
 end
 
-=begin
+=begin Additional Spec
  def get_a_number(array)
     if array.length != 0
         i=array.last+1
@@ -44,4 +45,4 @@ end
 def serve_customer(array)
     array.shift
 end
-=end
+
