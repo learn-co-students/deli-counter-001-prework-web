@@ -4,12 +4,13 @@ def line(katz_deli)
     if katz_deli.length==0
         puts "The line is currently empty."
     else
-        puts "The line is currently: "
-        n=1
-        while n <= katz_deli.length
-            puts n#.to_s + ". "+ katz_deli[n].to_s
-            n+=1
-        end
+        string = "The line is currently: "
+
+        katz_deli.each.with_index do |n, i|
+            string.concat("#{i+1}. #{n} ")
+            end
+        puts string.strip
+        
     end
     
 end
@@ -22,7 +23,25 @@ def now_serving(katz_deli)
     if katz_deli.length==0
         puts "There is nobody waiting to be served!"
     else
-        puts "Currently serving #{katz_deli[0]}"
+        puts "Currently serving #{katz_deli[0]}."
         katz_deli.shift
     end
 end
+
+=begin
+ def get_a_number(array)
+    if array.length != 0
+        i=array.last+1
+        array.push(i)
+        return i
+    else
+        i= array.length+1
+        array.push(i)
+        return i
+    end
+end
+
+def serve_customer(array)
+    array.shift
+end
+=end
