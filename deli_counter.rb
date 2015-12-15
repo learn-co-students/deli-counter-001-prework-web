@@ -1,4 +1,5 @@
-#Write your code here.
+#Objective 
+# Using 3 metods we are trying to create a deli counter that displays who and how many people are online. What happens when a new person comes joins the deli line and who the deli is now currently serving on line. 
 #Use the array argument as a formal parameter 
 def line(array)
   #If the array size is zero, this means the array is empty therefore the line is empty 
@@ -9,7 +10,7 @@ def line(array)
   else 
     # We create a new array to add the enumerable to and set it equal to a variable new_list 
     new_list = Array.new 
-    #Intialize the counter to 1 for the enumerator seeing as it represents a definite loop based on the size of the array its iterating over
+    #Intialize the counter to 1 for the enumerator seeing as it represents a definite loop thats based on the size of the array its iterating over
     i = 1 
     #Using the enumerator to enumerate each value in the array, represented by an arbitrary x value, iterate through the array and combine the value for i and the value for x to create a string. We then add the newly combined string to the end of the empty array (new_list) to create a new array i.e [1. Logan, 2. Avi, 3. Spencer"] with the correct order. 
     array.each do |x| new_list.push("#{i}. #{x}") 
