@@ -8,14 +8,13 @@ def line(deli)
 			#<< is not a bitwise operator!!
 			message << " #{index + 1}. #{name}"
 		end
-
 		puts message
 	end
 end
 
 def take_a_number(deli, name)
-	deli.push(name)
-	puts "Welcome, #{name}. You are number #{deli.index(name) + 1} in line."
+	deli << name
+	puts "Welcome, #{name}. You are number #{deli.size} in line."
 end
 
 def now_serving(deli)
