@@ -1,21 +1,18 @@
-# Write your code here.
-# katz_deli=[]
-# other_deli=["Loagn","Avi","Spencer"]
-
 def line(katz_deli)
   if katz_deli.empty?
     puts "The line is currently empty."
   else
-    s = "The line is currently:"
-    katz_deli.each_with_index {|x,y| s = "#{s} #{y+1}. #{x}"}
-    puts s
+    string = "The line is currently:"
+    katz_deli.each_with_index do |e,i| 
+      string = string + " #{i+1}. #{e}"
+    end
+    puts string
   end
 end
 
 def take_a_number(array, name)
   array.push(name)
   puts "Welcome, #{name}. You are number #{array.size} in line." 
-  
 end
 
 def now_serving(katz_deli)
@@ -25,11 +22,4 @@ def now_serving(katz_deli)
     puts "Currently serving #{other_deli.first}."
     other_deli.shift
   end
-  
 end
-
-
-
-
-
-
