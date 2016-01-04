@@ -21,7 +21,7 @@ def take_a_number(line, name)
     line.push(name)
   end
   num_in_line= line.size
-  puts"Welcome, #{name}. You are number #{num_in_line} in line."
+  puts "Welcome, #{name}. You are number #{num_in_line} in line."
 end
 
 def now_serving(line)
@@ -33,5 +33,3 @@ def now_serving(line)
   end
 end
 
-now_serving([])
-now_serving(["Avi Tal", "Yehudi"])
