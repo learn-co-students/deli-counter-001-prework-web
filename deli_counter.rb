@@ -32,17 +32,3 @@ def now_serving(katz_deli)
   end
 
 end
-
-katz_deli = []
-line(katz_deli)
-take_a_number(katz_deli, "Amanda")
-line(katz_deli)
-take_a_number(katz_deli, "Barry")
-take_a_number(katz_deli, "Charles")
-line(katz_deli)
-now_serving(katz_deli)
-take_a_number(katz_deli, "Dean")
-line(katz_deli)
-now_serving(katz_deli)
-now_serving(katz_deli)
-line(katz_deli)
