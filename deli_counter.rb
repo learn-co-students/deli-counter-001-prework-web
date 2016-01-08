@@ -15,11 +15,7 @@ def line(line)
 end
 
 def take_a_number(line, name)
-  if line.empty? == true
-    line[0]= name
-  else
-    line.push(name)
-  end
+  line.push(name)
   num_in_line= line.size
   puts "Welcome, #{name}. You are number #{num_in_line} in line."
 end
@@ -33,3 +29,15 @@ def now_serving(line)
   end
 end
 
+def get_a_number(line)
+  if line.empty?
+    line.push(line.size + 1)
+  else
+    line.push(line[-1] + 1)
+    end
+  line[-1]
+end
+
+def serve_customer(line)
+  line.shift
+end
