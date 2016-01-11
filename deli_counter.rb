@@ -1,4 +1,5 @@
 # Write your code here.
+#make array.find_index(array[0]) your new best friend
 
 katz_deli = []
 
