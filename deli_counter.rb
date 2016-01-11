@@ -1,30 +1,24 @@
 # Write your code here.
 def line(katz_deli)
-  count = 1;
-  line_str = "The line is currently: "
-  if katz_deli.size == 0
-    puts("The line is currently empty.")
+  str_line = ""
+  if(katz_deli.size == 0)
+    str_line = "The line is currently empty."
   else
-    katz_deli.each do |person|
-      if(count == katz_deli.size)
-        puts(line_str + "#{count}. #{person}")
-      else
-        line_str += ("#{count}. #{person} ")
-      end
-      count += 1
-    end
+    str_line = "The line is currently:"
+    katz_deli.each_with_index {|name, index| str_line << " #{index+1}. #{name}"}
   end
+  puts str_line
 end
 
-def take_a_number(katz_deli, new_name)
-  katz_deli << new_name
-  puts "Welcome, #{new_name}. You are number #{katz_deli.size} in line."
+def take_a_number(katz_deli, customer)
+  katz_deli << customer
+  puts "Welcome, #{customer}. You are number #{katz_deli.size} in line."
 end
 
 def now_serving(katz_deli)
-  if katz_deli.size == 0
-    puts("There is nobody waiting to be served!")
+  if(katz_deli.size == 0)
+    puts "There is nobody waiting to be served!"
   else
-    puts("Currently serving #{katz_deli.shift}.")
+    puts "Currently serving #{katz_deli.shift}."
   end
 end
