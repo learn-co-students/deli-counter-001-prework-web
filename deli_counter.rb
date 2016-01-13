@@ -6,7 +6,15 @@ katz_deli = []
 
 def line(array)
   if array.length > 0
-    puts "The line is currently: 1. #{array[0]} 2. #{array[1]} 3. #{array[2]}"
+    puts "The line is currently: #{array.find_index(array[0])+1}. #{array[0]} #{array.find_index(array[1])+1}. #{array[1]}"
+# #{array.find_index(array[0])+1}
+#problem I'm having is having the string present the last option if there is any.
+
+=begin
+  if array.length >= 3
+    puts " #{array.find_index(array[2])+1}. #{array[2]}"
+  end
+=end
 
   else
     puts "The line is currently empty." 
