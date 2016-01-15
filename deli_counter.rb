@@ -4,22 +4,6 @@
 katz_deli = []
 
 
-# Build the line method that shows everyone their current place in 
-# the line. If there is nobody in line, it should say 
-# "The line is currently empty.".
-
-def line(deli_line)
-  if deli_line.size == 0
-    puts "The line is currently empty."
-  else
-    order = "The line is currently:"
-    deli_line.each_with_index do |name, index|
-    order << " #{index+1}. #{name}"
-    end
-    puts order
-  end
-end
-
 # Build a method that a new customer will use when entering the deli. 
 # The take_a_number method should accept two arguments, the array for 
 # the current line of people (katz_deli), and a string containing the 
@@ -44,13 +28,22 @@ def now_serving(deli_line)
   end
 end
 
+# Build the line method that shows everyone their current place in 
+# the line. If there is nobody in line, it should say 
+# "The line is currently empty.".
 
-# Definitions to review:
+def line(deli_line)
+  if deli_line.size == 0
+    puts "The line is currently empty."
+  else
+    order = "The line is currently:"
+    deli_line.each_with_index do |name, index|
+    order << " #{index+1}. #{name}"
+    end
+    puts order
+  end
+end
 
-# method and argument
-# .size (what is it actualy doing)
-# recheck interpolation
-# recheck each_with_index
-# shoveling = adding to arrays and ALSO strings
+
 
 
