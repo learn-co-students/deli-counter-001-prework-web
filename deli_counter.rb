@@ -15,7 +15,7 @@ array.each.with_index(1) do |name, index|
   if array.length == 0
     array.push(name)
       puts "Welcome, #{name}. You are number #{index} in line."
-  elsif
+  else
     array.length > 0
     array.push(name)
       puts "Welcome, #{name}. You are number #{index} in line."
