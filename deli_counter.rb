@@ -23,4 +23,3 @@ def now_serving(people)
     puts "There is nobody waiting to be served!"
   end
 end
-truth
