@@ -33,12 +33,14 @@ def now_serving(array)
       puts "Currently serving #{serving}."
     end
 end
+#DRIVER CODE
 array = ["Logan", "Avi", "Spencer"]
 line(array)
 take_a_number(array,"Mike")
 now_serving(array)
 line(array)
 now_serving(array)
+
 
 
 
