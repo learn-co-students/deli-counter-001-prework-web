@@ -12,7 +12,6 @@ def line(array)
   end
 end
 
-
 def take_a_number(array, new_customer)
     new_array = []
   if array.empty?
@@ -34,8 +33,12 @@ def now_serving(array)
       puts "Currently serving #{serving}."
     end
 end
-# array = ["Logan", "Avi", "Spencer"]
-# array1 = []
+array = ["Logan", "Avi", "Spencer"]
+line(array)
+take_a_number(array,"Mike")
+now_serving(array)
+line(array)
+now_serving(array)
 
 
 
