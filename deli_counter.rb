@@ -1,5 +1,3 @@
-katz_deli = []
-
 def take_a_number(my_array, name)
   my_array << name 
   puts "Welcome, #{name}. You are number #{my_array.index(name) + 1 } in line."
