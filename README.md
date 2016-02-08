@@ -27,7 +27,7 @@ Example usage:
   ```ruby
   katz_deli = []
 
-  take_a_number(katz_deli, "Ada") #=> 1
+  take_a_number(katz_deli, "Ada") #=> 1 
   take_a_number(katz_deli, "Grace") #=> 2
   take_a_number(katz_deli, "Kent") #=> 3
 
