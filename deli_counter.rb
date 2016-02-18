@@ -8,23 +8,19 @@ def line(array)
   if array.empty?
     puts "The line is currently empty."
   else
-    # array.each_with_index do |customer, index|
-    #   puts "The line is currently: #{index + 1}. #{customer}"
-    # end
-    #TODO: try to refactor the following line - this passes test but is ugly. 
-    puts "The line is currently: 1. #{array[0]} 2. #{array[1]} 3. #{array[2]}"
+    customers_in_line = array.each_with_index.map do |customer, index|
+      "#{index + 1}. #{customer}"
+    end
+    puts "The line is currently: #{customers_in_line.join(" ")}"
   end 
 end
 
 def take_a_number(array, name)
-  if array.empty? #check for an empty array.
-    #array << array.length
+  if array.empty?
     array << name
-  elsif array.any? #check for a non-empty array.
+  elsif array.any?
     array << name
   end
-  #NOTE: many hours of refactoring and confusion boiled down to replacing a 'return'
-  #with the following 'puts' - talk w/ Glen about this.
   puts "Welcome, #{name}. You are number #{array.length} in line."
 end
 
