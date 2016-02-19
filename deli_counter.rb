@@ -1,25 +1,14 @@
-def line(customers)
-  if customers.empty?
-    puts "The line is currently empty."
+def get_a_number(line)
+  if line.empty?
+    line.push(1)
   else
-    message = "The line is currently:"
-    customers.each { |customer| message += " #{customers.index(customer) + 1}. #{customer}" }
-    puts message
+    line.push(line.last + 1)
   end
+  line.last
 end
 
-def take_a_number(deli, customer)
-  deli.push(customer)
-  position = deli.index(customer) + 1
-  puts "Welcome, #{customer}. You are number #{position} in line."
-  position
-end
-
-def now_serving(deli)
-  if deli.empty?
-    puts "There is nobody waiting to be served!"
-  else
-    puts "Currently serving #{deli[0]}."
-    deli.shift
-  end
+def serve_customer(line)
+  customer_up = line.first
+  line.shift
+  customer_up
 end
