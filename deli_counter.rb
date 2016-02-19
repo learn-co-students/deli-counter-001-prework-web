@@ -1,3 +1,19 @@
+def get_a_number(queue)
+  total = queue.last
+  if (queue.length == 0)
+    total += 1
+    queue.push(total)
+  else
+    total += 1
+    queue.push(total)
+  end
+end
+
+def serve_customer(queue)
+  queue.shift
+end
+
+
 def line(deli)
   if (deli.length == 0)
     puts "The line is currently empty."
