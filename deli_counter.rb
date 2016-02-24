@@ -19,9 +19,9 @@ def line(line_array)
     puts "The line is currently empty."
     else
     line_output = "The line is currently:"
-       line_array.each_with_index do |person, index|
-        line_output += (" #{index + 1}. #{person}")
-       end
+    line_array.each_with_index do |person, index|
+      line_output += (" #{index + 1}. #{person}")
+    end
     puts line_output
   end
 end
