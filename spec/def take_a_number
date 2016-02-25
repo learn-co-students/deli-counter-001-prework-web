@@ -1,0 +1,9 @@
+def take_a_number
+   line == []
+   if line.empty?
+    puts "The line is empty"
+    elsif line = 
+    puts ("The line is currently: 1. Logan 2. Avi 3. Spencer")
+    end
+
+    end
