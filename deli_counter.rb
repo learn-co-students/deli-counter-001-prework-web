@@ -1,22 +1,16 @@
 # Write your code here.
 
 
-def line(array)
-  a = array.length
-  i = 0
-  if a == 0 || a < 0
-    puts "The line is currently empty." 
-  else 
-    puts "The line is currently: 1. #{array[0]} 2. #{array[1]} 3. #{array[2]}"
-    
-=begin
-    while i < a do
-      puts " #{i+1}. #{array[i]}"
-      i += 1
-    end
-=end   
-  end 
 
+def line(array)
+  string=[]
+  if array.length == 0
+    puts "The line is currently empty."
+  else
+    array.each_with_index{|array, i|string.push( "#{i + 1}. #{array}");}
+    new_string = string.join(" ")
+    puts "The line is currently: " + new_string
+  end
 end
 
 
