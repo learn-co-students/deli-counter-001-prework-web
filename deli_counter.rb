@@ -6,11 +6,15 @@
 #Build the now_serving method which should call out (i.e. puts) the next person in line and then remove them from the front. 
 #If there is nobody in line, it should call out (puts) that "There is nobody waiting to be served!".
 
+
 def line(katz_deli)
 if katz_deli.length == 0
     puts "The line is currently empty."
   else
     lineup = "The line is currently:"
+  #For the following, used each_with_index enumberable
+  #Calls block with two arguments, the item and its index, for each item in enum. 
+  #Given arguments are passed through to each().
     katz_deli.each_with_index do |name, number| 
     lineup += " #{number+1}. #{name}"
   end
