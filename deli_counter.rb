@@ -19,13 +19,13 @@ end
 def take_a_number(deli, name)
   if deli.empty?
      deli.push(name)
-     place = deli.length
-     puts "Welcome, #{name}. You are number #{place} in line."
+     position = deli.length
+     puts "Welcome, #{name}. You are number #{position} in line."
   elsif deli.any?
      deli << name
     puts "Welcome, #{name}. You are number #{deli.index(name)+ 1} in line."
   else
-    print "#{name}  #{place}"
+    print "#{name}  #{position}"
   end
 end
 
