@@ -11,6 +11,7 @@ def line(katz_deli)
 if katz_deli.length == 0
     puts "The line is currently empty."
   else
+    #need a variable to store the value of the first part of the phrase
     lineup = "The line is currently:"
   #For the following, used each_with_index enumberable
   #Calls block with two arguments, the item and its index, for each item in enum. 
@@ -18,6 +19,7 @@ if katz_deli.length == 0
     katz_deli.each_with_index do |name, number| 
     lineup += " #{number+1}. #{name}"
   end
+  #put the first part of the phrase + the number of the person and their name
     puts lineup
   end
 end
