@@ -3,7 +3,7 @@ katz_deli = []
 def line (katz_deli)
   if katz_deli.empty?
     puts "The line is currently empty."
-  else
+  elsif katz_deli.any?
     line_status = "The line is currently:"
     katz_deli.each_with_index do | name, index |
       line_status << " #{index + 1}. #{name}"
@@ -20,7 +20,7 @@ end
 def now_serving (katz_deli)
   if katz_deli.empty?
     puts "There is nobody waiting to be served!"
-  else
+  elsif katz_deli.any?
     puts "Currently serving #{katz_deli[0]}."
     katz_deli.shift
   end
