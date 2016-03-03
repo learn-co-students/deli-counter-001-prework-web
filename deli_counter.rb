@@ -1,13 +1,13 @@
 
 
 def line (katz_deli)
-    if katz_deli.size < 1 
-      puts "The line is currently empty." 
-    else
-     line_order = katz_deli.collect.with_index do |i, index|
-      "#{index +1}. #{i}"
+  if katz_deli.size < 1 
+    puts "The line is currently empty." 
+  else
+    line_order = katz_deli.collect.with_index do |name, index|
+      "#{index +1}. #{name}"
     end
-     puts "The line is currently: #{line_order.join(" ")}"
+    puts "The line is currently: #{line_order.join(" ")}"
   end
 end
 
