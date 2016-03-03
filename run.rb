@@ -1,0 +1,4 @@
+
+myArray = []
+
+line(myArray)
