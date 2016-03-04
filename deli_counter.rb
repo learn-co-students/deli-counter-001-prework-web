@@ -20,7 +20,7 @@ def take_a_number(arr, str)
      place = arr.length
      puts "Welcome, #{str}. You are number #{place} in line."
   elsif arr.any?
-    new_arr = arr << str
+     arr << str
     puts "Welcome, #{str}. You are number #{arr.index(str)+ 1} in line."
   else
     print "#{str}  #{place}"
@@ -35,3 +35,4 @@ def now_serving(line)
     puts "Currently serving #{serving}."
   end
 end
+
