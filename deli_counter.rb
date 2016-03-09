@@ -16,8 +16,8 @@ if katz_deli.length == 0
   #For the following, used each_with_index enumberable
   #Calls block with two arguments, the item and its index, for each item in enum. 
   #Given arguments are passed through to each().
-    katz_deli.each_with_index do |name, number| 
-    lineup += " #{number+1}. #{name}"
+    katz_deli.each.with_index(1) do |name, number| 
+    lineup += " #{number}. #{name}"
   end
   #put the first part of the phrase + the number of the person and their name
     puts lineup
@@ -39,5 +39,16 @@ def now_serving(katz_deli)
     puts "Currently serving #{katz_deli.shift}."
   end
 end
+
+def get_a_number(queu)
+    number = queu.last.to_i + 1
+    queu << number
+    queu.last
+  end
+
+def serve_customer(queu)
+  queu.shift
+end
+
 
 
