@@ -36,6 +36,8 @@ def take_a_number(katz_deli, name)
     
    
    people_waiting =  katz_deli.count
+
+   katz_deli << name
     
         
         while people_waiting > 0
