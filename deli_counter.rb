@@ -7,16 +7,18 @@ katz_del = []
 
 def line(array)
 
-    people_in_line = array.count
-
-    array.each_with_index do |person, place_in_line| 
-
-        if people_in_line > 0 
-            puts "#{person}, your place in line is: #{place_in_line}"
+        if array == 0 
+            
+            puts "The line is currently empty."
+        
         else
-            return "The line is currently empty"
-        end
+            array.each_with_index do |person, place_in_line| 
 
+            
+            puts "The line is currently: #{place_in_line} #{person}"
+        
+        end
+      
     end
 
 end
