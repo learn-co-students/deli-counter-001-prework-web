@@ -15,11 +15,18 @@ def line(array)
         else
              array.each_with_index do |person, number| 
 
-            puts "The line is currently: #{number+1}. #{person}"
+              puts "The line is currently: #{number+1}. #{person}"
+        
+            end
+          
+
+        #displays the current number of people waiting in line
+
+
+        puts "The current number of people waiting is #{array.count}"          
         
         end
-          
-    end
+
 
 end
 
@@ -49,6 +56,7 @@ def take_a_number(katz_deli, name)
         break
         
         
+
         end
     
     end
