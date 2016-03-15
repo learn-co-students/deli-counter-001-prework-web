@@ -23,3 +23,21 @@ def now_serving(deli)
     deli.shift
   end
 end
+
+#New methods
+
+def get_a_number(queue)
+
+  if queue.size == 0
+    queue.push(1)
+    else
+    queue << queue.last.next
+  end
+
+  return queue.last
+end
+
+def serve_customer(queue)
+  queue.shift
+end
+
