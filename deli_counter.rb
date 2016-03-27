@@ -5,8 +5,8 @@ def line(array)
     puts "The line is currently empty."
   else
     foo = []
-    array.each_with_index {|array, i|
-      foo.push( "#{i + 1}. #{array}")
+    array.each_with_index { |element, index|
+      foo.push( "#{index + 1}. #{element}")
     }
     puts "The line is currently: " + foo.join(" ")
   end
