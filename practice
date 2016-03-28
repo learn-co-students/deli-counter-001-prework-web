@@ -1,0 +1,6 @@
+def take_a_number(customer, newcustomer)
+  customer.push(newcustomer)
+    greeting=[]
+    customer.each_with_index{|x,index|greeting<<("Welcome, #{x}. You are number #{index+1} in line.")}
+    puts greeting
+  end
