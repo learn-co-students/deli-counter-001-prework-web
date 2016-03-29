@@ -1,11 +1,11 @@
 def line(deli)
-   if deli.empty?
+  if deli.empty?
     puts "The line is currently empty."
   else 
     people_in_line = "The line is currently:" 
-    deli.each.with_index(1) {|person, indx| people_in_line << " #{indx}. #{person}"}
+    deli.each.with_index(1) {|person, indx| people_in_line + " #{indx}. #{person}"}
       puts people_in_line
-    end
+  end
 end
 
 def take_a_number(deli, name)
