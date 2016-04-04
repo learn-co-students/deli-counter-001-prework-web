@@ -1,15 +1,13 @@
 # Write your code here.
 katz_deli = []
 def line(deli)
-display = "The line is currently:"
+  result = "The line is currently:"
   if  deli.empty? != true
-      deli_hash = {}
       deli.each_with_index do |name, position|
-      deli_hash[name] = position
-      display << " #{position + 1}. #{name}"
+        result <<  " #{position + 1}. #{name}"
       end
-    puts display
-    else
+  puts result
+  else
     puts "The line is currently empty."
   end
 end
