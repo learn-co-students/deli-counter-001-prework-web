@@ -7,7 +7,6 @@ def shuffle(deli_array)
   value = ""
   deli_array.each_with_index do |deli, idx|
     value = value + " #{idx+1}. #{deli}"
-
   end
    puts "The line is currently:" + value
 end
@@ -18,7 +17,7 @@ def line(deli_array)
   else
     puts "The line is currently empty."
   end
- end
+end
 
 def now_serving(deli_array)
 	if deli_array.size > 0
