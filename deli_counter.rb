@@ -13,8 +13,8 @@ def line(deli)
 end
 
 def take_a_number(katz_deli, name)
-    katz_deli.push("#{name}")
-  line_number = katz_deli.index("#{name}")
+    katz_deli.push(name)
+  line_number = katz_deli.index(name)
   puts "Welcome, #{name}. You are number #{line_number + 1} in line."
 end
 
@@ -22,8 +22,8 @@ def now_serving(katz_deli)
   if katz_deli == []
     puts "There is nobody waiting to be served!"
     else
-    first_person = katz_deli.first
-    puts "Currently serving #{first_person}."
+    next_person = katz_deli.first
+    puts "Currently serving #{next_person}."
     katz_deli.shift
   end
 end
