@@ -1,13 +1,10 @@
-# Write your code here.
-
-
 def line(katz_deli)
   people = ""
   if katz_deli.empty?
     puts "The line is currently empty."
   else
-    katz_deli.each_with_index do |name, i|
-      people << " #{i+1}. #{name}"
+    katz_deli.each.with_index(1) do |name, number|
+      people << " #{number}. #{name}"
     end
     puts "The line is currently:#{people}"
   end
@@ -27,8 +24,18 @@ def now_serving(katz_deli)
   end
 end
 
-    #I kept changing the spacing and getting different, slightly misaligned results. The above is what finally made it pass. I think it was the space between " and #, but I'm not sure.
 
-# build a new method to be used for new customer
+def get_a_number(queue)
+  if queue.empty?
+  queue << 1
+    else
+    queue << queue.last+1
+  end
+  return queue.last
+end
+
+def serve_customer(queue)
+  queue.shift
+end
 
 
