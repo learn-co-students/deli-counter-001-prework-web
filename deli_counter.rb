@@ -6,14 +6,14 @@ def line(deli)
     else
     beginning_of_string = "The line is currently:"
     deli.each_with_index do |name,index|
-    beginning_of_string <<" #{index + 1}. #{name}"
+    beginning_of_string <<" #{index + 1}. #{name}" #shovel array into string
     end
     puts beginning_of_string
+    end
   end
-end
 
 def take_a_number(katz_deli, name)
-    katz_deli.push(name)
+  katz_deli.push(name)
   line_number = katz_deli.index(name)
   puts "Welcome, #{name}. You are number #{line_number + 1} in line."
 end
@@ -25,5 +25,5 @@ def now_serving(katz_deli)
     next_person = katz_deli.first
     puts "Currently serving #{next_person}."
     katz_deli.shift
+    end
   end
-end
