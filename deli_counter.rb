@@ -3,9 +3,8 @@ def line(katz_deli)
     puts "The line is currently empty."
     else
     line = "The line is currently:"
-    position = 0
-    katz_deli.each do |name|
-      line += " #{position += 1}. #{name}"
+    katz_deli.each_with_index(1) do |name, index|
+      line += " #{index}. #{name}"
     end
   puts "#{line}"
   end
@@ -23,3 +22,16 @@ def now_serving(katz_deli)
     puts "Currently serving #{katz_deli.shift}."
   end
 end
+
+def get_a_number(queue)
+  queue << queue.length + 1
+  queue.last
+end
+
+def serve_customer(queue)
+  if queue.length != 0
+    queue.shift
+  end
+  queue
+end
+
