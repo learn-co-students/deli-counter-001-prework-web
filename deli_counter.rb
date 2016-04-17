@@ -1,39 +1,30 @@
+require "pry" 
+
 def line(katz_deli)
-   empty_deli = "The line is currently empty."
-   busy_deli = "The line is currently:"
-
-   if katz_deli.empty?
-    puts empty_deli
-   else
-      katz_deli.each_with_index do |value, index|
-         busy_deli << " #{index+1}. #{value}"
-     end
-     puts busy_deli
-   end
-
-end
-
-def take_a_number(customers_inline, new_customer)
-
-  customers_inline << new_customer
-  customer_number = customers_inline.index(new_customer) + 1
-
-  puts "Welcome, #{new_customer}. You are number #{customer_number} in line."
-
-end
-
-
-def now_serving(customers_inline)
-
-  if customers_inline.empty?
-    puts "There is nobody waiting to be served!"
+  empty_deli = "The line is currently empty."
+  busy_deli = "The line is currently:"
+  unless katz_deli.empty?
+    katz_deli.each_with_index do |shopper, position|
+    busy_deli << " #{position + 1}. #{shopper}"
+    end
+    puts busy_deli
   else
-    customer_infront = customers_inline.shift
-    puts "Currently serving #{customer_infront}."
+    puts empty_deli
   end
-
 end
 
+def take_a_number(katz_deli, shopper)
+  katz_deli << shopper
+  position = katz_deli.index(shopper)+1
+  puts "Welcome, #{shopper}. You are number #{position} in line."
+end
 
+def now_serving(katz_deli)
+  if katz_deli.empty?
+    puts "There is nobody waiting to be served!"
+  else 
+    puts "Currently serving #{katz_deli.shift}."
+  end 
+end
 
-
+#shift and unshift vs push and pop are opposite operations
