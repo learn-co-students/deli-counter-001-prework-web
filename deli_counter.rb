@@ -17,7 +17,8 @@ end
 
 def take_a_number(katz_deli, shopper)
   katz_deli << shopper
-  position = katz_deli.index(shopper)+1
+  # position = katz_deli.index(shopper)+1 
+  position = katz_deli.count
   puts "Welcome, #{shopper}. You are number #{position} in line."
 end
 
