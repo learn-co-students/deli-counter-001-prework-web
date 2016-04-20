@@ -1,29 +1,28 @@
+#line = ["Logan", "Avi", "Spencer"]
 def line(line)
-  if line.count == 0
-    puts "The line is currently empty."
+  que = "The line is currently"
+  if line.size == 0
+    puts "#{que} empty."
   else
-    string = "The line is currently: "
-    for i in (0...line.count)
-      string.concat("#{i+1}. #{line[i]} ")
+  lineString = ''
+    for i in 0...line.size
+      lineString += "#{i+1}. #{line[i]} "
     end
-    puts string[0, string.length-1]
+    lineString = lineString.chomp(lineString[lineString.size-1])
+    puts "#{que}: #{lineString}"
   end
 end
-
-
-
+#line(line)
+#line = ["Logan", "Avi", "Spencer"]
+#line = []
+#name = "jenna"
 def take_a_number(line, name)
-  if line.count == 0
     line.push(name)
-    puts "Welcome, #{name}. You are number #{line.count} in line."
-  elsif line.count != 0
-    line.push(name)
-    puts "Welcome, #{name}. You are number #{line.count} in line."
-  end
+    puts "Welcome, #{name}. You are number #{line.index(name)+1} in line."
 end
 
 def now_serving(line)
-  if line.count == 0
+  if line.size == 0
     puts "There is nobody waiting to be served!"
   else
     puts "Currently serving #{line.shift}."
