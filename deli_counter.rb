@@ -18,3 +18,23 @@ def now_serving(serving)
     puts "Currently serving #{serving.shift}."
   end
 end
+
+counter = []
+
+def get_a_number(queue, *counter)
+  if queue.size == 0
+    queue << 1
+    queue.last
+  else
+    queue << queue.last + 1
+    queue.last
+  end
+end
+
+def serve_customer(queue)
+  if queue.size > 0
+    get_a_number(queue.collect {|num| num })
+  else
+
+  end
+end
