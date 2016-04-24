@@ -5,9 +5,9 @@ def line(katz_deli)
   else
     sent="The line is currently:"
     katz_deli.each_with_index do |name,index|
-       sent += " #{index.to_i+1}. #{name}"
+       sent += " #{index+1}. #{name}"
       end
-    puts "#{sent}"
+    puts sent
 end
 
   def take_a_number(katz_deli,name)
