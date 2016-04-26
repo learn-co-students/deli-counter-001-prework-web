@@ -7,12 +7,12 @@ def line(current_line)
     puts "The line is currently empty."
   else
     # variable used to hold the final message
-  	queue = "The line is currently:"
+    queue = "The line is currently:"
     # iterate over the array and add the index + 1, along with the name
     # to the end of the queue variable
-  	current_line.each_with_index do |name, index|
-  		queue += " " + (index + 1).to_s + ". #{name}"
-  	end
+    current_line.each_with_index do |name, index|
+    queue += " " + (index + 1).to_s + ". #{name}"
+  end
   puts queue
   end
 end
@@ -28,7 +28,7 @@ end
 
               # array
 def now_serving(current_line)
-	if current_line.empty?
+  if current_line.empty?
 		puts "There is nobody waiting to be served!"
 	else
     # holds the first element from current_line and removes it from the array
