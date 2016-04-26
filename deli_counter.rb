@@ -11,8 +11,8 @@ def line(current_line)
     # iterate over the array and add the index + 1, along with the name
     # to the end of the queue variable
     current_line.each_with_index do |name, index|
-    queue += " " + (index + 1).to_s + ". #{name}"
-  end
+    	queue += " " + (index + 1).to_s + ". #{name}"
+  	end
   puts queue
   end
 end
