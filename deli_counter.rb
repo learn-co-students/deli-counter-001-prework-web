@@ -14,7 +14,7 @@ end
 
 def take_a_number(deli, name)
   number = deli.length + 1 # line starts from 1
-  deli << name # shovelling new name to the array
+  deli << name # shovels new name to the array
   puts "Welcome, #{name}. You are number #{number} in line." # welcomes the new customer and shows their number in the line
   
 end
