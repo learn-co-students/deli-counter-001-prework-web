@@ -6,8 +6,8 @@ def line(deli)
     current_line = "The line is currently:" 
     deli.each.with_index(1) do |person, i| # calls .each and .with_index with and argument methods on deli and iterate over each element
       current_line << " #{i}. #{person}" # wraps i and person variables for string interpolation and writes it in to current_line
-  end
-  puts current_line 
+    end
+    puts current_line 
   end
   
 end
