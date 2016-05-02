@@ -8,9 +8,9 @@ def line(list)
   else
     #else, put a string here and concat item until the end
       string =  "The line is currently:"
-    list.each do |name|
+    list.each_with_index do |name,i|
       #adds info to the back of the string, including the index and the name of the person
-      string = string + " #{list.index(name)+1}. #{name}"
+      string = string + " #{i+1}. #{name}"
     end
     #infally, prints the string here
     puts string
@@ -41,4 +41,28 @@ def now_serving(list)
 end
 
 
+$ar_pointer = nil
+$tracker = 1
+def get_a_number(queue)
+  #this is to differentiate the difference between a newly declared 'queue= []' and from the 'empty queue' that is being shifted
+    #if the pointer is nil or if the pointer is not the same as previous array, resets the tracker, or the counter to 1 again
+    if ($ar_pointer.nil? || !($ar_pointer.equal?(queue) ))
+      $ar_pointer = queue
+      $tracker = 1
+    end
 
+    #if the length is 0, then  push 1 and increament the tracker by 1
+     if ( queue.length == 0 )
+          queue.push($tracker)
+             $tracker +=1
+    else
+      #else, push the tracker again and increament by 1
+          queue.push($tracker)
+            $tracker+=1
+    end
+       return queue.last
+end
+
+def serve_customer (queue)
+return queue.shift
+end
