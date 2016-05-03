@@ -31,7 +31,13 @@ end
 
 
 def get_a_number(queue)
-  
+  if queue.length == 1
+    number = queue[0]
+    queue = []
+    return queue
+  end
+
+
   if queue.empty? 
     queue << 1
   else
