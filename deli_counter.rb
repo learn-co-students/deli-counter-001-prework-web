@@ -35,12 +35,15 @@ def get_a_number(queue)
   if queue.empty? 
     queue << 1
   else
-    queue[queue.length] = queue.last + 1
+    queue << queue.last + 1
   end
   queue.last
 end
 
 def serve_customer(queue)
+  if queue.length == 1
+    get_a_number(queue)
+  end
   queue.shift
 end
 
