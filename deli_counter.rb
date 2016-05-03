@@ -36,7 +36,7 @@ def get_a_number(queue)
     queue << 1
   elsif queue.length > 0
     queue << queue.last + 1
-  elsif $global_variable != 0
+  else 
     queue << $global_variable + 1
   end
    queue.last
