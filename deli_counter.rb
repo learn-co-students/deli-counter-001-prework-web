@@ -29,27 +29,23 @@ def now_serving(deli)
 end
 
 
+$global_variable = 0
 
 def get_a_number(queue)
-  if queue.length == 1
-    number = queue[0]
-    queue = []
-    return queue
-  end
-
-
-  if queue.empty? 
+  if queue.empty? && $global_variable == 0
     queue << 1
-  else
+  elsif queue.length > 0
     queue << queue.last + 1
+  elsif $global_variable != 0
+    queue << $global_variable + 1
   end
-  queue.last
+   queue.last
 end
 
 def serve_customer(queue)
   if queue.length == 1
-    get_a_number(queue)
+    $global_variable = queue.last
   end
-  queue.shift
+   queue.shift
 end
 
