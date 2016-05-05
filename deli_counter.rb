@@ -1,3 +1,4 @@
+$temp = 0
 # Write your code here.
 def line(katz_deli)
   str_line = ""
@@ -21,4 +22,22 @@ def now_serving(katz_deli)
   else
     puts "Currently serving #{katz_deli.shift}."
   end
+end
+
+def get_a_number(line)
+  if(line.size == 0 && $temp == 0) #first go through
+    line << 1
+  elsif($temp > 0) #not first go through and array size is 0
+    line << $temp + 1
+    $temp = 0
+  else
+    line << line.last + 1
+    $temp = 0
+  end
+  line.last
+end
+
+def serve_customer(line)
+  $temp = line.last if (line.size == 1) #store the value if its last
+  line.shift
 end
