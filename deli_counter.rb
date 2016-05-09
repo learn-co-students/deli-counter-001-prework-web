@@ -6,15 +6,15 @@ def line(order)
   end
 end
 
-def take_a_number(queue,name)
-  queue.push(name)
-  puts "Welcome, #{name}. You are number #{queue.length} in line."
+def take_a_number(order,name)
+  order.push(name)
+  puts "Welcome, #{name}. You are number #{order.length} in line."
 end
 
-def now_serving(queue)
-  if queue.empty?
+def now_serving(order)
+  if order.empty?
     puts "There is nobody waiting to be served!"
   else
-    puts "Currently serving #{queue.shift}."
+    puts "Currently serving #{order.shift}."
   end
 end
