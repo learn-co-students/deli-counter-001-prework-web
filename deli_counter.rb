@@ -5,9 +5,8 @@ def line(katz_deli)
     puts "The line is currently empty."
   else
     list = []
-    katz_deli.map.with_index { |x, i|
-      list << "#{i+1}."
-      list << x
+    katz_deli.each.with_index { |x, i|
+      list << "#{i+1}. #{x}"
     }
 
     puts "The line is currently: #{list.join(" ")}"
@@ -17,15 +16,13 @@ end
 def take_a_number(katz_deli, name)
   katz_deli << name
 
-  katz_deli.map.with_index { |x, i|
-      puts "Welcome, #{x}. You are number #{i+1} in line." if x == name
-  }
+  puts "Welcome, #{name}. You are number #{katz_deli.count} in line."
 end
 
 def now_serving(katz_deli)
   if katz_deli.size == 0
     puts "There is nobody waiting to be served!"
   else
-    puts "Currently serving #{katz_deli.delete_at(0)}."
+    puts "Currently serving #{katz_deli.shift}."
   end
 end
