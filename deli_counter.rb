@@ -2,7 +2,9 @@ def line(order)
   if order.empty?
     puts "The line is currently empty."
   else
-    puts "The line is currently: " + order.map.with_index{ |name, place| (place + 1).to_s + ". " + name }.join(" ")
+    message = "The line is currently:"
+    order.each_with_index {|name, place| message += " #{place+1}. #{name}"}
+    puts message
   end
 end
 
