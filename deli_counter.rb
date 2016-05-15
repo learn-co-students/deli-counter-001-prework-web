@@ -1,3 +1,9 @@
+#Original solution begins on line 46
+#Modified to Reset Roll begins on ine 76
+#Added Text output begins on line 117
+
+
+
 def line(line)
   que = "The line is currently:"
   if line.size == 0
@@ -37,8 +43,10 @@ end
 
 
 
+# ------ My Solution ----- #
 
 roll = []
+queue = []
 
 def counter(roll, queue)
   if roll.size === 0
@@ -63,12 +71,96 @@ def serve_customer(queue)
   return queue
 end
 
-#pull number
-#number push to queue [1]
-#pull
-#number push to queue [1,2]
-#serve
-#queue [2]
-#pull number
-#number push to queue [2,3]
+
+
+# ---- My Solution Modified to Reset Ticket Roll --- #
+
+queue = []
+roll = []
+
+def change_ticket_roll(roll)
+  while roll.size > 0
+    roll.pop()
+  end
+end
+
+def counter(roll, queue)
+  if roll.size == 99
+    change_ticket_roll(roll)
+    ticket = 1
+    roll.push(ticket)
+    queue.push(ticket)
+  elsif roll.size == 0
+    ticket = 1
+    roll.push(ticket)
+    queue.push(ticket)
+  else
+    ticket = roll.size + 1
+    roll.push(ticket)
+    queue.push(ticket)
+  end
+  return ticket
+end
+
+def get_a_number(queue, roll)
+  counter(roll, queue)
+end
+
+def serve_customer(queue)
+  customer = queue[0]
+  queue = queue.shift()
+  return queue
+end
+
+
+
+#  ---- My Solution Modified with Text Print Outs ---- #
+
+
+
+queue = []
+roll = []
+
+def change_ticket_roll(roll)
+  while roll.size > 0
+    roll.pop()
+  end
+end
+
+def counter(roll, queue)
+  if roll.size == 99
+    change_ticket_roll(roll)
+    ticket = 1
+    roll.push(ticket)
+    queue.push(ticket)
+    puts "You are number #{ticket}."
+  elsif roll.size == 0
+    ticket = 1
+    roll.push(ticket)
+    queue.push(ticket)
+    puts "You are number #{ticket}."
+  else
+    ticket = roll.size + 1
+    roll.push(ticket)
+    queue.push(ticket)
+    puts "You are number #{ticket}."
+  end
+  return ticket
+end
+
+def get_a_number(queue, roll)
+  counter(roll, queue)
+end
+
+def serve_customer(queue)
+  customer = queue[0]
+  puts "Calling ticket #{customer}!"
+  queue = queue.shift()
+  if queue === nil
+    puts "There is no one waiting to be served."
+  end
+  return queue
+end
+
+
 
