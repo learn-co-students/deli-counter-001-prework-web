@@ -2,13 +2,13 @@ def line(katz_deli)
   if katz_deli == []
     puts "The line is currently empty."
   else
+    string = "The line is currently:"
     index = 0
-    line_array = []
     while index < katz_deli.length
-      line_array << ("#{index + 1}. #{katz_deli[index]}")
+      string << " #{index + 1}. #{katz_deli[index]}"
       index += 1
     end
-    puts "The line is currently: #{line_array.join(" ")}"
+    puts string
   end
 end
 
