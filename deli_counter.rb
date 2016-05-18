@@ -12,6 +12,16 @@ def line (katz_deli)
     puts current
   end
 end
+def get_customer
+  @customer = @customer || 0
+end
+
+def get_a_number(queue)
+  get_customer
+  #@customer+=1
+  queue.push(@customer+=1)
+
+end
 
 def take_a_number (katz_deli, name)
   katz_deli.push(name)
@@ -22,7 +32,7 @@ def now_serving(katz_deli)
   if katz_deli.size == 0
     puts "There is nobody waiting to be served!"
   else
-    next_person = katz_deli.shift                   
+    next_person = katz_deli.shift
     puts "Currently serving #{next_person}."
   end
 end
