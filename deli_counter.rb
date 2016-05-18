@@ -1,4 +1,18 @@
 # Write your code here.
+@counter = 1
+
+def get_a_number(array)
+  array.push(@counter)
+  @counter += 1
+  return @counter
+end
+
+def serve_customer(array)
+  customer = array.shift
+  return customer
+end
+
+
 
 def line(array)
   if array.size == 0
