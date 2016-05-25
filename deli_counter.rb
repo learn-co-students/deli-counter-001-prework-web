@@ -2,7 +2,7 @@
 def line(array)
   if array.size !=0
     string = "The line is currently:" 
-      array.each_with_index.map do |customer, index| string += " #{index+1}. #{customer}"
+      array.each_with_index do |customer, index| string += " #{index+1}. #{customer}"
       end
       puts string
   else
