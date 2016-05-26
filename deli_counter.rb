@@ -3,7 +3,7 @@ def line(katz_deli)
     puts "The line is currently empty."
  else
     announcement = "The line is currently:" # set variable to start building announcement
-    katz_deli.each_with_index do |value, index| 
+    katz_deli.each_with_index do |value, index| #executes block that gets names, line position
     announcement += " #{index+1}. #{value}" #adds and assigns to announcement
    end
    puts announcement
