@@ -5,7 +5,7 @@ def line(deli)
   else
     count = 0
     result = "The line is currently:"
-    while count < deli.size do
+    while count < deli.length do
       result = result.concat(" #{count + 1}. #{deli[count]}")
       count += 1
     end
