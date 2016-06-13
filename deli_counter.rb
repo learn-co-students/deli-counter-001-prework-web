@@ -2,14 +2,14 @@ def line(array)
   if(array.size == 0)
     puts "The line is currently empty."
   else
-    welcome = "The line is currently: "
+    current_line = "The line is currently: "
     count = 1
     array.each do |name|
-      welcome = welcome + "#{count}. #{name} "
+      current_line = current_line + "#{count}. #{name} "
       count+=1
     end
 
-    puts welcome[0...-1]
+    puts current_line[0...-1]
   end
 end
 
