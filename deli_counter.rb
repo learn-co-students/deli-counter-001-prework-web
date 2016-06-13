@@ -18,9 +18,8 @@ def take_a_number(deli,name)
     deli<<name
     puts "Welcome, #{name}. You are number 1 in line."
   else
-    index = deli.size+1
     deli.push(name)
-    puts "Welcome, #{name}. You are number #{index} in line."
+    puts "Welcome, #{name}. You are number #{deli.size} in line."
   end
 end
 
