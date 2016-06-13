@@ -3,10 +3,10 @@ def line(deli)
     puts "The line is currently empty."
   else
     current_line = "The line is currently: "
-    count = 1
+    place = 1
     deli.each do |name|
-      current_line = current_line + "#{count}. #{name} "
-      count+=1
+      current_line = current_line + "#{place}. #{name} "
+      place+=1
     end
 
     puts current_line[0...-1]
