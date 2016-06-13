@@ -1,10 +1,10 @@
-def line(array)
-  if(array.size == 0)
+def line(deli)
+  if(deli.size == 0)
     puts "The line is currently empty."
   else
     current_line = "The line is currently: "
     count = 1
-    array.each do |name|
+    deli.each do |name|
       current_line = current_line + "#{count}. #{name} "
       count+=1
     end
@@ -13,22 +13,22 @@ def line(array)
   end
 end
 
-def take_a_number(array,name)
-  if(array.size == 0)
+def take_a_number(deli,name)
+  if(deli.size == 0)
     puts "Welcome, #{name}. You are number 1 in line."
-    array<<name
+    deli<<name
   else
-    index = array.size+1
+    index = deli.size+1
     puts "Welcome, #{name}. You are number #{index} in line."
-    array.push(name)
+    deli.push(name)
   end
 end
 
-def now_serving(array)
-  if(array.size == 0)
+def now_serving(deli)
+  if(deli.size == 0)
     puts "There is nobody waiting to be served!"
   else
-    name = array.shift
+    name = deli.shift
     puts "Currently serving #{name}."
   end
 end
