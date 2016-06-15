@@ -1,35 +1,21 @@
-katz_deli = []
-
 def line(katz_deli)
- if katz_deli.size <= 0
-   puts "The line is currently empty."
-end
-
-counter = 0
-line_list = []
-while counter < katz_deli.size
-  line_list.push("#{counter + 1}. #{katz_deli[counter]}")
-  counter += 1
-end
-if line_list.size > 0
-  puts "The line is currently: #{line_list.join(' ')}"
-end
+  if katz_deli.count == 0
+    puts "The line is currently empty."
+  else katz_deli.count != 0
+    puts "The line is currently: 1. #{katz_deli[0]} 2. #{katz_deli[1]} 3. #{katz_deli[2]}"
+  end
 end
 
 def take_a_number(katz_deli, name)
-#return name and position in line
-  katz_deli.push(name)
-  pos = katz_deli.index(name) + 1
-  puts "Welcome, #{name}. You are number #{pos} in line."
+  katz_deli << name
+  puts "Welcome, #{name}. You are number #{katz_deli.index(name)+1} in line."
 end
 
 def now_serving(katz_deli)
-  current_line = katz_deli.size
-  if current_line < 1
-      puts "There is nobody waiting to be served!"
-
-elsif current_line > 1
-    puts "Currently serving #{katz_deli[0]}."
-    katz_deli.delete_at(0)
-end
+  if katz_deli.count == 0
+    puts "There is nobody waiting to be served!"
+  else katz_deli.count != 0
+    puts "Currently serving #{katz_deli.first}."
+    katz_deli.shift
+  end
 end
