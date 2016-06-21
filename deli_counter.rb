@@ -11,8 +11,11 @@ end
 
 def take_a_number(katz_deli, name)
     katz_deli << name
-    index = katz_deli.size
-    puts "Welcome, #{name}. You are number #{index} in line."
+    welcome = []
+    katz_deli.each_with_index do |name, index|
+      welcome = "Welcome, #{name}. You are number #{index+1} in line."
+    end
+      puts welcome
 end
 
 def now_serving(katz_deli)
