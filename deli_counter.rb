@@ -9,10 +9,10 @@ def line(katz_deli)
   end
 end
 
-def take_a_number(katz_deli, string)
-    katz_deli << string
+def take_a_number(katz_deli, name)
+    katz_deli << name
     index = katz_deli.size
-    puts "Welcome, #{string}. You are number #{index} in line."
+    puts "Welcome, #{name}. You are number #{index} in line."
 end
 
 def now_serving(katz_deli)
