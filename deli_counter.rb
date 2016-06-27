@@ -1,11 +1,11 @@
 # Write your code here.
-def line(array)
+def line(katz_deli)
   count = 0
   string = "The line is currently: "
-  if array.any? == false
+  if katz_deli.any? == false
     puts "The line is currently empty."
-  else array.any? == true
-    array.each do |x|
+  else katz_deli.any? == true
+    katz_deli.each do |x|
       count += 1
       string << "#{count}. #{x} "
     end
