@@ -4,7 +4,7 @@ def line(array)
   string = "The line is currently: "
   if array.any? == false
     puts "The line is currently empty."
-  elsif array.any? == true
+  else array.any? == true
     array.each do |x|
       count += 1
       string << "#{count}. #{x} "
@@ -22,7 +22,7 @@ def now_serving(katz_deli)
   cur_customer = ""
   if katz_deli.any? == false
     puts "There is nobody waiting to be served!"
-  elsif katz_deli.any? == true
+  else katz_deli.any? == true
     cur_customer << katz_deli.shift
     puts "Currently serving #{cur_customer}."
   end
