@@ -5,10 +5,11 @@ def line(katz_deli)
   if katz_deli.empty? == true
     puts "The line is currently empty."
   else
-    print "The line is currently:"
-    katz_deli.each_with_index do |person, index|
-      print " #{index+1}. #{person}"
+    current_line = katz_deli.each_with_index.collect do |person, index|
+      "#{index+1}. #{person}"
     end
+    current_line.unshift("The line is currently:")
+    puts current_line.join(" ")
   end
 end
 
