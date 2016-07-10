@@ -14,5 +14,10 @@ def line(arr)
 end
 
 def take_a_number(arr, str)
-  arr.push(str)
+  arr = arr.push(str)
+  puts "Welcome, #{str}. You are number #{arr.index(str) + 1} in line."
+end
+
+def now_serving(arr)
+  
 end
