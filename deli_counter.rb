@@ -3,7 +3,11 @@ def line(array)
   if array.length == 0
     puts "The line is currently empty."
   else
-    puts "The line is currently: 1. #{array[0]} 2. #{array[1]} 3. #{array[2]}"
+    line = ""
+    for position in 0..array.length - 1
+      line << " #{position + 1}. #{array[position]}"
+    end
+    puts "The line is currently:#{line}"
   end
 end
 
