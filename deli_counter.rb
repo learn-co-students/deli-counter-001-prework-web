@@ -18,9 +18,9 @@ end
 
 
 
-def take_a_number(katz_deli, new_person)
-    katz_deli.push(new_person)
-    puts "Welcome, #{new_person}. You are number #{katz_deli.length} in line."
+def take_a_number(array, element)
+    array.push(element)
+    puts "Welcome, #{element}. You are number #{array.length} in line."
 end
 
 def now_serving(katz_deli)
