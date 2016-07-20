@@ -1,14 +1,28 @@
+#def line(katz_deli)
+#  if katz_deli.length == 0
+#    puts "The line is currently empty."
+#  else
+#    line = "The line is currently:"
+#    katz_deli.each_with_index do |customer, number|
+#      line << " #{number + 1}. #{customer}"
+#    end
+#    puts line
+#  end
+#end
+
 def line(katz_deli)
   if katz_deli.length == 0
     puts "The line is currently empty."
   else
     line = "The line is currently:"
-    katz_deli.each_with_index do |customer, number|
-      line << " #{number + 1}. #{customer}"
+    count = 0
+    katz_deli.each do |name|
+      line << " " << (count += 1 ).to_s << ". #{name}"
     end
     puts line
   end
 end
+
 
 def take_a_number(katz_deli, customer)
   katz_deli << customer
