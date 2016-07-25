@@ -30,5 +30,5 @@ end
 # Part one
 # if empty say empty. or else for each person in line list number and name
 # part two
-# add each person to string, and give them the welcome and the number (length of string) in the line
-# final part is loop where each time someone served they come out until no one left. 
+# add each person to string, and give them the welcome and the number (length of string) in the line. If string already has three people then the second variable will be fourth. number already there + 1
+# final part is loop where you list who is currently being served and then remove them from line
