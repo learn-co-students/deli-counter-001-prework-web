@@ -1,7 +1,7 @@
 katz_deli = []
 
 def line (katz_deli)
-  if katz_deli.count > 1
+  if katz_deli.count > 0
     output = "The line is currently:"
     katz_deli.each_with_index do |name, index|
       output << " #{index +1}. #{name}"
