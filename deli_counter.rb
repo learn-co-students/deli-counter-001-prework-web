@@ -3,7 +3,7 @@ def line(katz_deli)
     puts "The line is currently empty."
   else
     message = "The line is currently:" 
-    other_deli.each_with_index do |value, index| 
+    katz_deli.each_with_index do |value, index| 
       message += " #{index + 1}. #{value }"
     end
     puts "#{message}"
@@ -26,5 +26,7 @@ def now_serving(katz_deli)
     puts "Currently serving #{name}."
   end
 end  
+
+
 
 
