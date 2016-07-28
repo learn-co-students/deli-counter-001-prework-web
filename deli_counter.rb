@@ -9,13 +9,11 @@ def line(katz_deli)
     # if there are people in line
     message = "The line is currently:"
     katz_deli.each_with_index do |name, index|
-      message += " #{index.to_i+1}. #{name}"
+      message += " #{index +1}. #{name}"
     end
     puts message
   end
 end
-
-
 
 def take_a_number(katz_deli, name)
   #this takes in the name and puts it at the end of the array. Adds
@@ -25,7 +23,7 @@ def take_a_number(katz_deli, name)
 end
 
 
-def now_serving(katz_deli)
+def now_serving(katz_deli) #it calls out the person to whom it is serving and removes it from the array.
   if katz_deli.length == 0
     puts "There is nobody waiting to be served!"
   else
