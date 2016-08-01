@@ -44,7 +44,11 @@ end
 def now_serving(katz_deli)
   if katz_deli.empty? == true
     puts "There is nobody waiting to be served!"
-
+#How do I get the name of the current customer? It's an element in the array that you need to access. 
+#The Method: at(index) → obj or nil
+#Returns the element at index.
+#A negative index counts from the end of self.
+#Returns nil if the index is out of range. See also #[].
   else
     current_customer = katz_deli.at(0)
     puts "Currently serving #{current_customer}."
