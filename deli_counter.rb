@@ -2,7 +2,7 @@
 katz_deli=[]
 def take_a_number(katz_deli, name)
   katz_deli << name
-  number=katz_deli.find_index {|item| item==name}+1
+  number=katz_deli.index(name)+1
   puts "Welcome, #{name}. You are number #{number} in line." #not sure about puts
 end
 
@@ -28,11 +28,12 @@ def now_serving(katz_deli)
   end
 end
 
-
-line(katz_deli)
-now_serving(katz_deli)
-take_a_number(katz_deli, "Jill")
-line(katz_deli)
-take_a_number(katz_deli, "Mitra")
-line(katz_deli)
-now_serving(katz_deli)
+def runner
+  line(katz_deli)
+  now_serving(katz_deli)
+  take_a_number(katz_deli, "Jill")
+  line(katz_deli)
+  take_a_number(katz_deli, "Mitra")
+  line(katz_deli)
+  now_serving(katz_deli)
+end
