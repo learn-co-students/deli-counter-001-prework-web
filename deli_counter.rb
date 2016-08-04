@@ -7,14 +7,14 @@ def take_a_number(katz_deli, name)
 end
 
 def line(katz_deli)
-  new_katz_deli=[]
-  katz_deli.each_with_index do |name, index|
-    new_katz_deli<< "#{index+1}. #{name}"
-  end
-  string_katz_deli = new_katz_deli.join(" ")
   if katz_deli==[]
     puts "The line is currently empty."
   else
+    new_katz_deli=[]
+    katz_deli.each_with_index do |name, index|
+      new_katz_deli<< "#{index+1}. #{name}"
+    end
+    string_katz_deli = new_katz_deli.join(" ")
     puts "The line is currently: #{string_katz_deli}" #right notation for katz's?
   end
 end
