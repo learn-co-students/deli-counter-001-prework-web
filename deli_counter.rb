@@ -37,6 +37,7 @@ def take_a_number(katz_deli, name)
   #Returns nil if no match is found.
   #see also rindex
   #An Enumerator is returned if neither a block nor argument is given.
+  #Enumerator: A class which allows both internal and external iteration.
   line_index = katz_deli.index { |placement| placement == "#{name}"}+1 #this is the iteration. loop and add 1 each time.
   puts "Welcome, #{name}. You are number #{line_index} in line."
 end
@@ -44,7 +45,7 @@ end
 def now_serving(katz_deli)
   if katz_deli.empty? == true
     puts "There is nobody waiting to be served!"
-#How do I get the name of the current customer? It's an element in the array that you need to access. 
+#How do I get the name of the current customer? It's an element in the array that you need to access.
 #The Method: at(index) → obj or nil
 #Returns the element at index.
 #A negative index counts from the end of self.
