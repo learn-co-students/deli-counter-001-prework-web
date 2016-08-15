@@ -1,10 +1,9 @@
 def line (array)
-  if array.size == 0
+  new_line = []
+  if array.size ==  0
     puts "The line is currently empty."
-  else
-    new_array = []
-    array.each_with_index {|name, i| new_array << "#{i + 1}. #{name}"}
-    puts "The line is currently: #{new_array.join(" ")}"
+  else array.each_with_index {|name, i| new_line << "#{i + 1}. #{name}"}
+    puts "The line is currently: #{new_line.join(" ")}"
   end
 end
 
@@ -14,5 +13,5 @@ def take_a_number (array, name)
 end
 
 def now_serving (array)
-  puts array.size == 0?  "There is nobody waiting to be served!" : "Currently serving #{array.shift}."
+  puts array.size == 0 ? "There is nobody waiting to be served!" : "Currently serving #{array.shift}."
 end
