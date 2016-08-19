@@ -4,11 +4,10 @@ def line(katz_deli)
   if katz_deli.size == 0
     puts "The line is currently empty."
   else
-    arr = []
-    katz_deli.each_with_index do |name, index| 
-      arr[index] = "#{index + 1}. #{name}"
+    name_list = katz_deli.map.with_index do |name, index|
+      "#{index + 1}. #{name}"
     end
-    puts "The line is currently: " + arr.join(" ")
+    puts "The line is currently: " + name_list.join(" ")
   end
 end
 
