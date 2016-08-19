@@ -17,7 +17,7 @@ end
 #Array Methods Cheat Sheet: https://www.shortcutfoo.com/app/dojos/ruby-arrays/cheatsheet
 def take_a_number(katz_deli, name)
   katz_deli.push(name)
-  placeInLine = katz_deli.index {|i| i == "#{name}"}+1
+  placeInLine = katz_deli.index {|i| i == "#{name}"}+1 #your place in line is the current index +1
   puts "Welcome, #{name}. You are number #{placeInLine} in line."
 end
 
@@ -29,6 +29,6 @@ def now_serving(katz_deli)
   else
     current_customer = katz_deli.at(0)
     puts "Currently serving #{current_customer}."
-    katz_deli.shift
+    katz_deli.shift #removes the first element, and shifts every other element down by 1. The line moves.
   end
 end
