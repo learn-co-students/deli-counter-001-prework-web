@@ -1,10 +1,8 @@
 katz_deli = []
 
 def take_a_number(katz_deli, name)
-  katz_deli.length == 0 || katz_deli.length > 0
   katz_deli << name
-  number = katz_deli.length
-  puts "Welcome, #{name}. You are number #{number} in line."
+  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
   #adds name to #katz_deli. returns welcome message using length of #katz_deli.
 end
 
